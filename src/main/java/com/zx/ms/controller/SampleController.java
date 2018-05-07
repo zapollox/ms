@@ -25,7 +25,7 @@ public class SampleController {
 
     @RequestMapping("/thymeleaf")
     public String thymeleaf(Model model){
-        model.addAttribute("name","test");
+        model.addAttribute("name","tttttt");
         return "hello";
     }
     @RequestMapping("getUser")
