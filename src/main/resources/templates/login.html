@@ -81,7 +81,7 @@ function doLogin(){
 	    	password: password
 	    },
 	    success:function(data){
-	    	layer.closeAll();
+	    	layer.closeAll();//关闭loding框
 	    	if(data.code == 0){
 	    		layer.msg("成功");
 	    		window.location.href="/goods/to_list";

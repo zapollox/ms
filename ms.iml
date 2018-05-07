@@ -59,7 +59,6 @@
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.module:jackson-module-parameter-names:2.9.5" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-tomcat:2.0.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-core:8.5.29" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-el:8.5.29" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-websocket:8.5.29" level="project" />
     <orderEntry type="library" name="Maven: org.hibernate.validator:hibernate-validator:6.0.9.Final" level="project" />
     <orderEntry type="library" name="Maven: javax.validation:validation-api:2.0.1.Final" level="project" />
@@ -96,5 +95,7 @@
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-devtools:2.0.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:2.0.1.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.0.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-validation:2.0.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-el:8.5.29" level="project" />
   </component>
 </module>
