@@ -51,20 +51,30 @@ public class MiaoshaUserService {
 		if(!calcPass.equals(dbPassword)){
 			throw new GlobalException(CodeMsg.PASSWORD_ERROR);
 		}
-		//生成cookie
 		String token = UUIDUtil.uuid();
-		redisService.set(MiaoshaUserKey.token,token,user);
+		addCookie(response,token,user);
+		return true;
+	}
+
+	public MiaoshaUser getByToken(HttpServletResponse response,String token) {
+		if(StringUtils.isEmpty(token)){
+			return null;
+		}
+		MiaoshaUser user = redisService.get(MiaoshaUserKey.token, token, MiaoshaUser.class);
+		//延长有效期
+		if(user != null) {
+			addCookie(response,token, user);
+		}
+		return user;
+
+	}
+
+	private void addCookie(HttpServletResponse response,String token,MiaoshaUser user){
+		//生成cookie
+		redisService.set(MiaoshaUserKey.token,token,user);//将用户信息保存到redis
 		Cookie cookie = new Cookie(COOKI_NAME_TOKEN,token);
 		cookie.setMaxAge(MiaoshaUserKey.token.expireSeconds());
 		cookie.setPath("/");
 		response.addCookie(cookie);
-		return true;
-	}
-
-	public MiaoshaUser getByToken(String token) {
-		if(StringUtils.isEmpty(token)){
-			return null;
-		}
-		return redisService.get(MiaoshaUserKey.token,token,MiaoshaUser.class);
 	}
 }
