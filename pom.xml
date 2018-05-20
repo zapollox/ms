@@ -16,7 +16,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.0.1.RELEASE</version>
+    <version>1.5.13.RELEASE</version>
   </parent>
 
   <properties>
@@ -30,12 +30,15 @@
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
+      <version>1.5.13.RELEASE</version>
     </dependency>
 
-  <!--thymeleaf模板-->
+
+    <!--thymeleaf模板-->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-thymeleaf</artifactId>
+      <version>1.5.13.RELEASE</version>
     </dependency>
 
   <!--与mybatis整合-->
